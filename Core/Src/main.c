@@ -121,6 +121,7 @@ extern unsigned char USB_Received_Count;
       HAL_Delay(500);
       HAL_GPIO_WritePin(GPIOB,GPIO_PIN_5,GPIO_PIN_SET);
       HAL_Delay(500);
+      HAL_GPIO_WritePin(GPIOE,GPIO_PIN_5,GPIO_PIN_SET);
   }
   /* USER CODE END 3 */
 }

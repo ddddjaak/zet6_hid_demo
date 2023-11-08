@@ -209,6 +209,7 @@ static int8_t CUSTOM_HID_OutEvent_FS(uint8_t event_idx, uint8_t state)
     {
         USB_Recive_Buffer[i]=hhid->Report_buf[i];  //把接收到的数据送到自定义的缓存区保存（Report_buf[i]为USB的接收缓存区）
       printf("  buffer is %d \n",USB_Recive_Buffer[i]);
+      HAL_GPIO_WritePin(GPIOE,GPIO_PIN_5,GPIO_PIN_RESET);
     } 
     
   /* Start next USB packet transfer once data processing is completed */
